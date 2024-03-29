@@ -1,0 +1,76 @@
+/* HEADER SECTION  */
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1.25rem 1rem;
+    padding: 1.25rem 3rem; /* For medium devices and above */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+  }
+  
+  /* Left Area */
+  header .left-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Adjust as needed */
+  }
+
+  header .left-area button svg {
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+  }
+  
+  /* Right Area */
+  header .right-area {
+    display: none;
+  }
+
+  header .right-area a svg {
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+  }
+  
+  @media (min-width: 768px) {
+    header .right-area {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem; /* Adjust as needed */
+    }
+  }
+  
+  /* Button Styles */
+  header button,
+  header a {
+    padding: 0.5rem;
+    border-radius: 50%; /* For rounded shape */
+    background-color: #e2e8f0; /* Slate color */
+    color: #4b5563; /* Gray color */
+    text-decoration: none;
+    border: none;
+  }
+  
+  header button:hover,
+  header a:hover {
+    background-color: #bbf7d0; /* Green color */
+    color: #38a169; /* Dark green color */
+  }
+  
+  /* Additional Styles */
+  header a span {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    font-weight: bold;
+    color: #38a169; /* Dark green color */
+  }
+  
+  header button:last-of-type {
+    background-color: #e2e8f0; /* Slate color */
+  }
+  
