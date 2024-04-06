@@ -52,4 +52,4 @@ function generateMenuItems() {
 }
 
 // Call the function to generate menu items
-// generateMenuItems();
+generateMenuItems();
