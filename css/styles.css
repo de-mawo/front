@@ -1,76 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 /* HEADER SECTION  */
 header {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 1.25rem 1rem;
-    padding: 1.25rem 3rem; /* For medium devices and above */
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: white;
-  }
-  
-  /* Left Area */
-  header .left-area {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Adjust as needed */
-  }
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1.25rem 1rem;
+  padding: 1.25rem 3rem; /* For medium devices and above */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: white;
+}
 
-  header .left-area button svg {
-    width: 30px;
-    height: 30px;
-    font-weight: bold;
-  }
-  
-  /* Right Area */
-  header .right-area {
-    display: none;
-  }
+/* Left Area */
+header .left-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adjust as needed */
+}
 
-  header .right-area a svg {
-    width: 30px;
-    height: 30px;
-    font-weight: bold;
-  }
-  
-  @media (min-width: 768px) {
-    header .right-area {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 1rem; /* Adjust as needed */
-    }
-  }
-  
-  /* Button Styles */
-  header button,
-  header a {
-    padding: 0.5rem;
-    border-radius: 50%; /* For rounded shape */
-    background-color: #e2e8f0; /* Slate color */
-    color: #4b5563; /* Gray color */
-    text-decoration: none;
-    border: none;
-  }
-  
-  header button:hover,
-  header a:hover {
-    background-color: #bbf7d0; /* Green color */
-    color: #38a169; /* Dark green color */
-  }
-  
-  /* Additional Styles */
-  header a span {
-    position: absolute;
-    top: 0;
-    right: 0.5rem;
-    font-weight: bold;
-    color: #38a169; /* Dark green color */
-  }
-  
-  header button:last-of-type {
-    background-color: #e2e8f0; /* Slate color */
-  }
-  
+header .left-area button svg {
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+}
+
+/* Right Area */
+header .right-area {
+  display: none;
+}
+
+header .right-area a svg {
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+}
+
+/* Button Styles */
+header button,
+header a {
+  padding: 0.5rem;
+  border-radius: 50%; /* For rounded shape */
+  background-color: #e2e8f0; /* Slate color */
+  color: #4b5563; /* Gray color */
+  text-decoration: none;
+  border: none;
+}
+
+header button:hover,
+header a:hover {
+  background-color: #bbf7d0; /* Green color */
+  color: #38a169; /* Dark green color */
+}
+
+/* Additional Styles */
+header a span {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  font-weight: bold;
+  color: #38a169; /* Dark green color */
+}
+
+header button:last-of-type {
+  background-color: #e2e8f0; /* Slate color */
+}
+
+/* SIDEBAR  */
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  background-color: #64748b;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.sidenav .closeBtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+  margin: 4em;
+}
+#wrapper-grid .menu-card {
+  padding: 1em;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+#wrapper-grid .menu-card:hover {
+  --transform-scale-x: 1.05;
+  --transform-scale-y: 1.05;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#wrapper-grid .menu-card img {
+  width: 360px;
+  height: 200px;
+  object-fit: scale-down;
+  width: 100%;
+}
+
+#wrapper-grid .menu-card .menu-details {
+  flex-direction: column; 
+  flex: 1 1 0%; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
